@@ -1,0 +1,142 @@
+.footer__container {
+    display: flex;
+    padding: 55px 0 30px;
+
+    h2 {
+        font-weight: 700;
+        font-size: 14px;
+        margin: 0 0 15px;
+        color: #656566;
+        text-transform: uppercase;
+    }
+
+    a {
+        display: block;
+        color: $fc-main;
+        text-decoration: none;
+        padding: 5px 0;
+    }
+
+    @include vp-768 {
+        flex-direction: column;
+        padding: 42px 15px 31px;
+
+        h2 {
+            font-size: 12px;
+            letter-spacing: 0.8px;
+        }
+
+        a {
+            font-size: 14px;
+        }
+    }
+}
+
+.footer__about,
+.footer__menu {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.footer__about {
+    margin-right: 98px;
+
+    @include vp-768 {
+        margin: 0 0 25px;
+    }
+}
+
+.footer__menu {
+    margin-right: auto;
+
+    div {
+        display: flex;
+        gap: 52px;
+    }
+
+    @include vp-768 {
+        width: 100%;
+        margin: 0 0 25px;
+        
+        div {
+            gap: 48px;
+        }
+    }
+}
+
+.footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 275px;
+    justify-content: flex-end;
+    margin: 0 -5px 0;
+
+    a {
+        padding: 5px;
+    }
+
+    img {
+        display: block;
+    }
+
+    @include vp-768 {
+        justify-content: flex-start;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.footer__contacts {
+    text-align: right;
+
+    ul {
+        list-style: none;
+    }
+
+    li:first-child {
+        margin-bottom: 10px;
+    }
+
+    @include vp-768 {
+        text-align: left;
+
+        ul {
+            padding: 0;
+        }
+
+        li:first-child {
+            margin-bottom: 0;
+        }
+
+        li:first-child > a {
+            letter-spacing: 1.2px;
+        }
+    }
+}
+
+.footer__copywriting {
+    display: block;
+    font-family: $ff-montserrat;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: right;
+
+    a {
+        display: block;
+        color: $fc-main;
+        padding: 5px 0;
+    }
+
+    @include vp-768 {
+        padding: 0 15px 20px;
+        text-align: left;
+    }
+}

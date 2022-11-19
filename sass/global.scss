@@ -1,0 +1,62 @@
+$vp-1024: 1024px;
+$vp-768: 768px;
+
+$ff-inter: 'Inter', 'Arial', sans-serif;
+$ff-montserrat: 'Montserrat', 'Arial', sans-serif;
+
+$fc-main: #E4E5EA;
+$fc-secondary: #656566;
+$bg-color: #0E1014;
+$gradient: linear-gradient(to right, rgba(252, 176, 69, 1), rgba(255, 63, 120, 1) 120%);
+
+@mixin vp-1024 {
+    @media (max-width: ($vp-1024 - 1)) {
+        @content;
+    }
+}
+
+@mixin vp-768 {
+    @media (max-width: ($vp-768 - 1)) {
+        @content;
+    }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: $ff-inter;
+    font-size: 16px;
+    color: $fc-main;
+    background: 
+        url("img/backgound/purple_ball-desk.png") top right 36.5%,
+        url("img/backgound/purple_light-desk.png") top,
+        url("img/backgound/red_ball-desk.png") top 68.2% right 39.2%,
+        url("img/backgound/red_ball_1-desk.png") left 38% top 10%,
+        url("img/backgound/red_light-desk.png") left center,
+        $bg-color;
+    background-repeat: no-repeat;
+
+    @include vp-768 {
+        background: $bg-color;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+a {
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
